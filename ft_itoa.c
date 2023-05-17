@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cperez-c <cperez-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: celiaperezcandela <celiaperezcandela@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 11:28:38 by cperez-c          #+#    #+#             */
-/*   Updated: 2023/03/07 17:28:47 by cperez-c         ###   ########.fr       */
+/*   Updated: 2023/05/17 14:35:40 by celiaperezc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	len_nbr(long int n)
 	Devuelve:
 		* Un valor entero que representa la cantidad de dígitos del número.
  */
-*/
 {
 	int	len;
 

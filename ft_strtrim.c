@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cperez-c <cperez-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: celiaperezcandela <celiaperezcandela@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 15:57:35 by cperez-c          #+#    #+#             */
-/*   Updated: 2023/03/07 18:25:40 by cperez-c         ###   ########.fr       */
+/*   Updated: 2023/05/17 14:53:14 by celiaperezc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	start = 0;
-	while (s1[start] && strchr(set, s1[start]) != NULL)
+	while (s1[start] && ft_strchr(set, s1[start]) != NULL)
 		start++;
-	end = strlen(s1);
-	while (end > start && strchr(set, s1[end - 1]) != NULL)
+	end = ft_strlen(s1);
+	while (end > start && ft_strchr(set, s1[end - 1]) != NULL)
 		end--;
 	result = ft_calloc(end - start + 1, sizeof(char));
 	if (!result)
 		return (NULL);
-	strncpy(result, s1 + start, end - start);
+	ft_strlcpy(result, s1 + start, end - start + 1);
 	return (result);
 }

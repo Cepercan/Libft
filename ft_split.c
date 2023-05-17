@@ -6,7 +6,7 @@
 /*   By: celiaperezcandela <celiaperezcandela@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 12:11:42 by cperez-c          #+#    #+#             */
-/*   Updated: 2023/03/03 19:15:23 by celiaperezc      ###   ########.fr       */
+/*   Updated: 2023/05/17 14:36:42 by celiaperezc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ static int	count_words(const char *str, char c)
 
 	Devuelve:
 		* el número de palabras en la cadena.
-*/
 */
 {
 	int	words;
@@ -137,31 +136,3 @@ char	**ft_split(const char *str, char c)
 	res[j] = NULL;
 	return (res);
 }
-
-/*
-	La función ft_split recibe como parámetros una
-	cadena de caracteres str y un carácter c delimitador y
-	se encarga de dividir la cadena str en subcadenas según el
-	delimitador c, almacenándolas en un arreglo de cadenas.
-
-	Para hacer esto, primero cuenta la cantidad de subcadenas
-	que habrá en el resultado utilizando la función count_words.
-	Luego, se reserva memoria para un arreglo de cadenas con un
-	tamaño igual a la cantidad de subcadenas más uno
-	(ya que se necesita una posición extra
-	para el valor NULL que indica el final del arreglo).
-
-	A continuación, se recorre la cadena str en busca de las
-	subcadenas, utilizando las funciones next_word y
-	next_delimiter para encontrar los índices correspondientes
-	al inicio y fin de cada subcadena.
-	Se crea una nueva subcadena para cada subcadena encontrada
-	mediante la función ft_substr y se almacena en el arreglo
-	de cadenas.
-
-	Finalmente, se agrega el valor NULL al final del arreglo
-	de cadenas y se retorna el resultado.
-	En caso de que no se pueda reservar memoria para el
-	arreglo de cadenas o para alguna subcadena, se liberan
-	los recursos y se retorna NULL.
-*/

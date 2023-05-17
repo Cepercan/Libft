@@ -1,7 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "libft.h"
 
+
+int main(void)
+{
+    char b[0xF] = "nyan !";
+    printf("%zu",strlcat(((void *)0), b, 0));
+    //printf("%zu",ft_strlcat(((void *)0), b, 0));
+    return(0);
+}
 // FT_ATOI -> int	ft_atoi(const char *str){}//
 /*
 int main()
